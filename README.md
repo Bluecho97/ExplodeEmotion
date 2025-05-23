@@ -6,7 +6,7 @@
 <table>
   <tr>
     <td><img src="https://github.com/user-attachments/assets/de0bc790-ce62-4b8b-bf50-a912d7d00c23" width="300"></td>
-    <td><img src="https://github.com/user-attachments/assets/769facae-449f-4ef0-b760-7b80fcfd344b" width="300"></td>
+    <td><img src="https://github.com/user-attachments/assets/b8e2405a-5a59-4264-b18a-a74f1d884614" width="300"></td>
     <td><img src="https://github.com/user-attachments/assets/1f4ff0a5-ad4e-453b-959a-08d400dd127f" width="300"></td>
   </tr>
   <tr>
@@ -26,4 +26,5 @@
   </tr>
 </table>
 
+![KakaoTalk_Photo_2025-05-24-08-36-58 002]()
 
