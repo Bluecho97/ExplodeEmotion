@@ -8,6 +8,8 @@ struct DescribeFeelingView: View {
     @State private var tapCount = 0
     @State private var timeLeft = 10
     @State private var timerActive = true
+    
+    @State private var isVisible = false
     @State private var showResult = false // For showing StarburstBackground
 
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -26,6 +28,18 @@ struct DescribeFeelingView: View {
                     .foregroundColor(.red)
                     .shadow(color: .red, radius: 8)
                     .padding(.bottom, 32)
+                
+                if timeLeft == 0 {
+                    Text("시간 종료!")
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                                path.append("Second") // 또는 원하는 페이지 이름
+                                isVisible = true
+                            }
+                        }
+                }
+                
+                // 누른 횟수 and tap count
                 HStack(spacing: 12) {
                     Text("누른 횟수")
                         .font(.system(size: 22, weight: .bold, design: .monospaced))
@@ -95,7 +109,7 @@ struct DescribeFeelingView: View {
             }
         }
         .fullScreenCover(isPresented: $showResult) {
-            StarburstBackground(tapCount: tapCount)
+            StarburstBackground(tapCount: tapCount, path: $path)
         }
     }
 }
