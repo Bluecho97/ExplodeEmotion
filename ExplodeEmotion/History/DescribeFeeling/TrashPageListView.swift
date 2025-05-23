@@ -106,6 +106,8 @@ struct TrashPageListView: View {
                 
             }
         }
+        .navigationBarBackButtonHidden(true) // <--- Hides the "<Back" button
+            
     }
 }
 
