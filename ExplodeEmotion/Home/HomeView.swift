@@ -53,7 +53,8 @@ struct HomeView: View {
             .navigationDestination(for: String.self) { value in
                 switch value {
                 case "First": DescribeFeelingView(path: $path)
-//                case "Second": StarburstBackgroundView(path: $path)
+                case "Second": StarburstBackground(tapCount: 1, path: $path)
+                case "Third": TrashPageView()
                 default: Text("Invalid Page")
                 }
             }

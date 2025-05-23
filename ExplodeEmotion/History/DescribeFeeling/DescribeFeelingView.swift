@@ -94,6 +94,8 @@ struct DescribeFeelingView: View {
     @State private var tapCount = 0
     @State private var timeLeft = 10
     @State private var timerActive = true
+    
+    @State private var isVisible = false
 
     // Timer publisher
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -122,7 +124,8 @@ struct DescribeFeelingView: View {
                     Text("시간 종료!")
                         .onAppear {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-//                                path.append("Second") // 또는 원하는 페이지 이름
+                                path.append("Second") // 또는 원하는 페이지 이름
+                                isVisible = true
                             }
                         }
                 }
@@ -195,6 +198,16 @@ struct DescribeFeelingView: View {
                 }
                 .buttonStyle(PlainButtonStyle())
                 .disabled(!timerActive)
+                
+//                if isVisible {
+//                    Button {
+//                        path.append("Second")
+//                    } label: {
+//                        Text("Next")
+//                    }
+//                    .buttonStyle(.borderedProminent)
+//
+//                }
                 
                 Spacer()
             }

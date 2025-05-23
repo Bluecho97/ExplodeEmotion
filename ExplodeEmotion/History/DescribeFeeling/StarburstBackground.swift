@@ -19,6 +19,7 @@ struct PixelText: View {
 
 struct StarburstBackground: View {
     let tapCount: Int
+    @Binding var path: NavigationPath
 
     var body: some View {
         ZStack {
@@ -48,14 +49,20 @@ struct StarburstBackground: View {
             VStack(spacing: 36) {
                 Spacer()
                 PixelText(text: "누른 횟수", fontSize: 36)
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                            path.append("Third") // 또는 원하는 페이지 이름
+                        }
+                    }
                 PixelText(text: "\(tapCount)", fontSize: 140)
                 Spacer()
             }
+            
         }
     }
 }
 
-#Preview {
-    StarburstBackground(tapCount: 10)
-}
+//#Preview {
+//    StarburstBackground(tapCount: 10)
+//}
 
