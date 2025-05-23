@@ -19,7 +19,7 @@ struct ContentView: View {
                     Text("홈")
                 }.tag(0)
             
-            HistoryListView()
+            HistoryView()
                 .tabItem {
                     Image(systemName: "pentagon.fill")
                     Text("혜택")
