@@ -15,7 +15,7 @@
     <td align="center">[ 클릭 뷰 ]</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/user-attachments/assets/ba77125a-73fb-47c4-8b85-579347fe932" width="300"></td>
+    <td><img src="https://github.com/user-attachments/assets/e27b5c96-5d63-470c-aa11-94f0e14e6be2" width="300"></td>
     <td><img src="https://github.com/user-attachments/assets/a7d02765-d778-4e40-94eb-68dd19e14685" width="300"></td>
     <td><img src="https://github.com/user-attachments/assets/6a3783a6-5ee8-4505-be49-905955c4bd9f" width="300"></td>
   </tr>
@@ -26,5 +26,6 @@
   </tr>
 </table>
 
-![KakaoTalk_Photo_2025-05-24-08-36-58 002]()
+
+
 
