@@ -1,6 +1,9 @@
 /*import SwiftUI
 
 struct DescribeFeelingView: View {
+    
+    @Binding var path: NavigationPath
+    
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
@@ -76,7 +79,7 @@ struct DescribeFeelingView: View {
 }
 
 #Preview {
-    DescribeFeelingView()
+    DescribeFeelingView(path: .constant(NavigationPath()))
 }
 */
 
