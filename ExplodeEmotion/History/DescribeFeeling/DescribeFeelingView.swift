@@ -84,6 +84,8 @@ struct DescribeFeelingView: View {
 */
 
 import SwiftUI
+import AudioToolbox
+
 
 struct DescribeFeelingView: View {
     
@@ -115,6 +117,15 @@ struct DescribeFeelingView: View {
                     .foregroundColor(.red)
                     .shadow(color: .red, radius: 8, x: 0, y: 0)
                     .padding(.bottom, 32)
+                
+                if timeLeft == 0 {
+                    Text("시간 종료!")
+                        .onAppear {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+//                                path.append("Second") // 또는 원하는 페이지 이름
+                            }
+                        }
+                }
                 
                 // 누른 횟수 and tap count
                 HStack(spacing: 12) {
@@ -166,6 +177,12 @@ struct DescribeFeelingView: View {
                 Button(action: {
                     if timerActive {
                         tapCount += 1
+                        
+                        let impactFeedback = UIImpactFeedbackGenerator(style: .heavy)
+                                        impactFeedback.impactOccurred()
+                                        
+                                        // 알림 소리
+                                        AudioServicesPlaySystemSound(1005)
                     }
                 }) {
                     Image("Group") // Replace with your asset name
