@@ -11,7 +11,9 @@ import SwiftUI
 struct ExplodeEmotionApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            //ContentView()
+            StartingView()
+        
         }
     }
 }
